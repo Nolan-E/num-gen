@@ -19,12 +19,9 @@ const shuffle = (arr) => {
     rdmIndex = Math.floor(Math.random() * currIndex);
     currIndex--;
 
-    // Swap two values by:
-    // Store the value at current index so as not to lose it
+    // Swap the element at the current index with the element at the random index using a temporary variable
     tempValue = arr[currIndex];
-    // Set the current index value to the value at the random index
     arr[currIndex] = arr[rdmIndex];
-    // Set the random index value to the initial value of the current index
     arr[rdmIndex] = tempValue;
   }
   return arr;

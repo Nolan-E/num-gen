@@ -12,7 +12,6 @@ const readline = require('readline').createInterface({
  * Logs the execution time in the console.
  */
 
-console.log('');
 console.time(chalk.greenBright('\n### Shuffle completed in'));
 
 // Default generated range is [1..10,000]. Also accepts custom user input range values as arguments.
@@ -22,14 +21,13 @@ const inputArr = _.range(rangeStart || 1, rangeEnd || 10001);
 
 // Takes generated range array and shuffles the data.
 shuffle(inputArr);
-console.log(`inputArr`, inputArr);
+console.log(chalk.cyanBright(`\nShuffled Output:`), inputArr);
 
 console.timeEnd(chalk.greenBright('\n### Shuffle completed in'));
-console.log('');
 
 // Prompt to print full array as a table to console (Node 10+)
 readline.question(
-  chalk.blueBright(`Would you like to see the full list of numbers? (y/n)\n`),
+  chalk.blueBright(`\nWould you like to see the full list of numbers? (y/n)\n`),
   (response) => {
     if (response === 'y') console.table(inputArr);
     if (response === 'n') console.log(chalk.greenBright('Terminating...'));
