@@ -11,6 +11,7 @@ const readline = require('readline').createInterface({
  * Runs the Fisher-Yates Shuffle modern algorithm on the newly generated array.
  * Logs the execution time in the console.
  */
+
 console.log('');
 console.time(chalk.greenBright('\n### Shuffle completed in'));
 
