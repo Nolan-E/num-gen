@@ -1,9 +1,10 @@
+const _ = require('lodash');
+const chalk = require('chalk');
+const shuffle = require('./shuffle');
 const readline = require('readline').createInterface({
   input: process.stdin,
   output: process.stdout,
 });
-const _ = require('lodash');
-const shuffle = require('./shuffle');
 
 /**
  * Leverage Lodash's range function to generate an array of numbers sequentially.
@@ -11,7 +12,7 @@ const shuffle = require('./shuffle');
  * Logs the execution time in the console.
  */
 console.log('');
-console.time('\n### Shuffle completed in');
+console.time(chalk.greenBright('\n### Shuffle completed in'));
 
 // Default generated range is [1..10,000]. Also accepts custom user input range values as arguments.
 const rangeStart = Number(process.argv[2]);
@@ -22,13 +23,15 @@ const inputArr = _.range(rangeStart || 1, rangeEnd || 10001);
 shuffle(inputArr);
 console.log(`inputArr`, inputArr);
 
-console.timeEnd('\n### Shuffle completed in');
+console.timeEnd(chalk.greenBright('\n### Shuffle completed in'));
 console.log('');
 
-readline.question(`Would you like to see the full list of numbers? (y/n)\n`, (response) => {
-  if (response === 'y') console.table(inputArr);
-  if (response === 'n') console.log('Terminating...');
-  readline.close();
-});
-
-
+// Prompt to print full array as a table to console (Node 10+)
+readline.question(
+  chalk.blueBright(`Would you like to see the full list of numbers? (y/n)\n`),
+  (response) => {
+    if (response === 'y') console.table(inputArr);
+    if (response === 'n') console.log(chalk.greenBright('Terminating...'));
+    readline.close();
+  }
+);
