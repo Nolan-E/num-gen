@@ -14,6 +14,7 @@ describe('Shuffle Algorithm', () => {
   });
 
   it('Returns empty array when given empty array', () => {
+    const input = [];
     const result = shuffle([]);
     expect(result.length).toEqual(0) &&
       expect(result).toEqual(expect.arrayContaining(input));
