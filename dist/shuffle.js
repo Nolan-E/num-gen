@@ -8,7 +8,8 @@
  * @param {number[]} arr - The input data array.
  * @returns {number[]} - Mutated input data array.
  */
-const shuffle = (arr) => {
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.default = (arr) => {
     let currIndex = arr.length;
     let rdmIndex;
     let tempValue;
@@ -24,4 +25,3 @@ const shuffle = (arr) => {
     }
     return arr;
 };
-module.exports = shuffle;

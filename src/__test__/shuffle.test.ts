@@ -1,5 +1,5 @@
 const { expect } = require('@jest/globals');
-const shuffle = require('../shuffle');
+import shuffle from '../shuffle';
 
 describe('Shuffle Algorithm', () => {
   it('Outputs an array', () => {
@@ -14,6 +14,7 @@ describe('Shuffle Algorithm', () => {
   });
 
   it('Returns empty array when given empty array', () => {
+    const input: any[] = [];
     const result = shuffle([]);
     expect(result.length).toEqual(0) &&
       expect(result).toEqual(expect.arrayContaining(input));

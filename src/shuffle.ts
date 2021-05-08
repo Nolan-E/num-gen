@@ -8,7 +8,7 @@
  * @returns {number[]} - Mutated input data array.
  */
 
-const shuffle = (arr: number[]): number[] => {
+export default (arr: number[]): number[] => {
   let currIndex = arr.length;
   let rdmIndex: number;
   let tempValue: number;
@@ -26,5 +26,3 @@ const shuffle = (arr: number[]): number[] => {
   }
   return arr;
 };
-
-module.exports = shuffle;
