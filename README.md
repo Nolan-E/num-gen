@@ -19,13 +19,14 @@ My next step was to setup TypeScript, and migrate my code from plain JavaScript.
 ## Getting Started
 Select which branch you are using for specific instructions:
   1. Branch: Master
-     - [Master](#branch-master)
-     - [Master Testing](#branch-master---testing) 
+     - [Master Program](#master-program)
+     - [Master Testing](#master-testing) 
   2. Branch: Migrate/typescript
-     - [Migrate/typescript](#branch-migratetypescript)
-     - [Migrate/typescript Testing](#branch-migratetypescript---testing)
+     - [Migrate/typescript Program](#migratetypescript-program)
+     - [Migrate/typescript Testing](#migratetypescript-testing)
 ***
-### Branch: Master
+## Branch: Master
+### Master Program
   1.  Clone GitHub repo
         ```shell
         $ git clone git@github.com:Nolan-E/num-gen.git num-gen
@@ -74,14 +75,15 @@ Select which branch you are using for specific instructions:
         └─────────┴────────┘
         ```
 
-### Branch: Master - Testing
+### Master Testing
   1. Follow installation instructions [above](#branch-master).
   2. Run test suite
         ```shell
         $ npm test
         ```
 ***
-### Branch: Migrate/typescript
+## Branch: Master/typescript
+### Migrate/typescript Program
   1.  Clone GitHub repo, specifying `migrate/typescript` branch
         ```shell
         $ git clone --branch migrate/typescript git@github.com:Nolan-E/num-gen.git num-gen
@@ -105,7 +107,7 @@ Select which branch you are using for specific instructions:
         ```
   5.  When prompted, the entire data set is viewable in a formatted table (Node 10+)
   6.  For example output, [click here](#branch-master)
-### Branch: Migrate/typescript - Testing
+### Migrate/typescript Testing
   1. Follow installation instructions [above](#branch-master).
   3. Run test suite
         ```shell
